@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>User's Current Time</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/micromodal.css">
+  </head>
+  <body>
+    <header id="header">
+        <h1>Current Time</h1>
+    </header>
+    <main>
+        <section class="container" id="clock">
+            <div>
+                <span id="current-time-zone" aria-live="polite"></span>
+                <a href="#" data-micromodal-trigger="modal-1">
+                    <img src="/icons/pencil-square.svg" width="12" height="12" alt="Edit timezone">
+                </a>
+            </div>
+            <div id="current-time" aria-live="polite"></div>
+            <div id="current-date" aria-live="polite"></div>
+        </section>
+    </main>
+    
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header">
+                    <h2 class="modal__title" id="modal-1-title">
+                        Change Timezone
+                    </h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <form>
+                        <select class="modal__select" name="timezones" id="timezones"></select>
+                        <button id="applyTimeZone" class="modal__btn modal__btn-primary" data-micromodal-close>Apply</button>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
