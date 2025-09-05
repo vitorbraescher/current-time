@@ -6,37 +6,38 @@
     <title>User's Current Time</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/micromodal.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <header id="header">
-        <h1>Current Time</h1>
+  <body class="bg-teal-700">
+    <header>
+        <h1 class="p-3 my-3 text-3xl font-extrabold text-white text-center">Current Time</h1>
     </header>
     <main>
-        <section class="container" id="clock">
-            <div>
+        <section class="shadow-xl bg-white rounded-lg text-right p-3 max-w-md mx-auto" id="clock">
+            <div class="bg-rose-300 text-white rounded-lg px-2 py-1 flex space-x-2 w-fit items-center ml-auto">
                 <span id="current-time-zone" aria-live="polite"></span>
                 <a href="#" data-micromodal-trigger="modal-1">
-                    <img src="/icons/pencil-square.svg" width="12" height="12" alt="Edit timezone">
+                    <img src="/icons/pencil-square.svg" width="15" height="15" alt="Edit timezone">
                 </a>
             </div>
-            <div id="current-time" aria-live="polite"></div>
-            <div id="current-date" aria-live="polite"></div>
+            <div class="text-7xl font-extrabold mt-2" id="current-time" aria-live="polite"></div>
+            <div class="text-xl" id="current-date" aria-live="polite"></div>
         </section>
     </main>
     
     <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                    <h2 class="modal__title" id="modal-1-title">
+        <div class="modal__overlay fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center" tabindex="-1" data-micromodal-close>
+            <div class="modal__container bg-white p-3 min-w-md" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="m-1 justify-between items-center flex">
+                    <h2 class="text-2xl font-extrabold" id="modal-1-title">
                         Change Timezone
                     </h2>
-                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    <button aria-label="Close modal" data-micromodal-close>&#x2715;</button>
                 </header>
-                <main class="modal__content" id="modal-1-content">
+                <main class="m-1" id="modal-1-content">
                     <form>
-                        <select class="modal__select" name="timezones" id="timezones"></select>
-                        <button id="applyTimeZone" class="modal__btn modal__btn-primary" data-micromodal-close>Apply</button>
+                        <select class="text-md p-1 border" name="timezones" id="timezones"></select>
+                        <button id="applyTimeZone" class="text-md p-1 bg-rose-300 hover:bg-rose-200 rounded" data-micromodal-close>Apply</button>
                     </form>
                 </main>
             </div>
