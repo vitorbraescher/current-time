@@ -2,7 +2,7 @@
 
 Simple webpage that shows the current time of user.
 
-<img width="733" height="398" alt="current-time-sample" src="https://github.com/user-attachments/assets/05f19e51-a21e-4cef-8f45-9c6a78ff73b3" />
+<img width="484" height="250" alt="Screenshot 2025-09-05 at 14 08 56" src="https://github.com/user-attachments/assets/200eeaea-b0d2-4321-9200-230a26119b38" />
 
 ## Features
 
